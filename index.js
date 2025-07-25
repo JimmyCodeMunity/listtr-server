@@ -5,7 +5,7 @@ const app = express();
 
 // get environment variables
 require("dotenv").config({
-  path: ".env",
+  path: "./.env",
 });
 
 app.use(
