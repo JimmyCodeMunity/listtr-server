@@ -70,6 +70,8 @@ const createUser = async (req, res) => {
 const userLogin = async (req, res) => {
   try {
     const { email, password } = req.body;
+    console.log("email", email);
+    console.log("password", password);
 
     // check for existing users
     const existinguser = await User.findOne({ email });
