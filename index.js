@@ -10,7 +10,9 @@ require("dotenv").config({
 
 app.use(
   cors({
-    origin: process.env.CLIENT_URL, //allowed front end url
+    // origin: process.env.CLIENT_URL, //allowed front end url
+    // allow all origins
+    origin: "*",
     credentials: true, //allow cookies
     methods: ["GET", "POST", "PUT", "DELETE"], //allowed methods
     allowedHeaders: ["Content-Type", "Authorization"], //allowed headers
