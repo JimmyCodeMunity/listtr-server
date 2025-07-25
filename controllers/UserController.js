@@ -99,8 +99,10 @@ const userLogin = async (req, res) => {
     res
       .cookie("token", token, {
         httpOnly: true,
-        secure: false,
-        sameSite: "strict",
+        // secure: false,
+        // sameSite: "strict",
+        secure: true, // required for cross-site cookies
+        sameSite: "None", // allow cross-origin
         maxAge: 60 * 60 * 1000,
       })
       .status(201)
